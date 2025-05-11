@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="mb-3">Your Playlist</h2>
+
+  <div *ngIf="loading" class="alert alert-info">
+    Loading playlist...
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger">
+    {{ error }}
+  </div>
+
+<ng-container *ngFor="let play of playlist">
+  <div class="match-card" *ngIf="loading">
+    <p><strong>{{play.title}}</strong> | {{play.competition}} | {{play.date}} | {{play.status}}</p>
+    <button (click)="removeMatch(play.id)">Remove from Playlist</button>
+    <a href={{play.link}} target="_blank" rel="noopener noreferrer"><button class="watch">Watch!</button></a>
+  </div>
+</ng-container>
+  <div *ngIf="!loading && playlist.length === 0" class="alert alert-warning">
+    No matches in your playlist.
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.login-container {
+    max-width: 600px;
+    background: #fdfdfd;
+    margin: 120px auto ;
+        padding: 1.5rem;
+
+  }
+  .login-container input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+  .login-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

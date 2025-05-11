@@ -1,0 +1,17 @@
+<div class="match-container">
+<h1 *ngIf="userName">Welcome, {{ userName }}!</h1>
+<h2>Available Matches</h2>
+<select [(ngModel)]="filter">
+  <option value="">All</option>
+  <option value="Live">Live</option>
+  <option value="Replay">Replay</option>
+</select>
+
+<ng-container *ngFor="let match of matches">
+  <div class="match-card" *ngIf="!filter || match.status === filter">
+    <p><strong>{{match.title}}</strong> | {{match.competition}} | {{match.date}} | {{match.status}}</p>
+    <button (click)="onAddToPlaylist(match.id)">Add to Playlist</button>
+    <a href={{match.link}} target="_blank" rel="noopener noreferrer"><button class="watch">Watch!</button></a>
+  </div>
+</ng-container>
+</div>
