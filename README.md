@@ -15,3 +15,22 @@
 
 - **Major Football Event Alerts**  
   Notify users when major football events (e.g., World Cup, Champions League Final) are announced or begin.
+
+
+## 🌐 Frontend Setup (Angular)
+
+```bash
+cd front       # Navigate to the Angular project folder
+npm install       # Install dependencies
+ng serve          # Start the Angular development server
+```
+
+
+##🖥️ Backend Setup (ASP.NET Core)
+
+```bash
+cd end/code-quests.API/   # Navigate to the API project folder
+dotnet restore            # Restore project dependencies
+dotnet ef database update # Apply EF Core migrations to the database
+dotnet run                # Start the backend server
+```
